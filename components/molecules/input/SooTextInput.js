@@ -1,7 +1,7 @@
 import React from 'react';
 import { isMatchText } from 'page/event/utils/common';
 
-const TextInput = ({ data }) => {
+const SooTextInput = ({ data }) => {
   const {
     id,
     name,
@@ -62,4 +62,4 @@ const TextInput = ({ data }) => {
   );
 };
 
-export default TextInput;
+export default SooTextInput;
