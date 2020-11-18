@@ -1,0 +1,7 @@
+.numberInput[type='text'] {
+  text-align: right;
+  
+  &::placeholder {
+    text-align: right;
+  }
+}
