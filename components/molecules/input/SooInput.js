@@ -1,14 +1,17 @@
-/* eslint-disable import/no-cycle */
-import SooTextInput from './SooTextInput';
-
 /**
  * SooInput Compoent
  * @param {object} props
  * @return {Component} SooInput Compoent
  */
 
-const SooInput = props => {
-  return <SooTextInput data={props} />
+import React from 'react';
+
+const SooInput = () => {
+  return (
+      <div>
+        Hello?
+      </div>
+  );
 };
 
 export default SooInput;
