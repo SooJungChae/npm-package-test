@@ -1,11 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import Soo from 'my-test-package';
+// import {Input, SooInput} from "../../dist";
+import { Input, SooInput } from 'my-test-package';
 
 function App() {
-  return (
+    // console.log(SooInput);
+    return (
     <div className="App">
-      <Soo />
+        {/*<SooInput />*/}
+        {/*<Input />*/}
+        <Input />
+      <SooInput />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

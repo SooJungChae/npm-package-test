@@ -219,9 +219,70 @@ var CheckboxInput = function CheckboxInput(_ref2) {
   });
 };
 
+var styles = {"group":"CheckboxButtonGroup-module_group__w9woX","button":"CheckboxButtonGroup-module_button__2CdIv","label":"CheckboxButtonGroup-module_label__3BBex","input":"CheckboxButtonGroup-module_input__2lPpF"};
+
+/**
+ * CheckboxButtonGroup
+ * @param {Object} {data}
+ * @param {String} {data.name}
+ * @param {String} {data.className}
+ * @param {Array} {data.options} *필수
+ * @param {function} {data.onChange} *필수
+ * @return {(e, name, value)} e, name, value
+ * @example
+ * <Index type="checkboxButtonGroup" options={Array} onChange={function} />
+ */
+
+var CheckboxButtonGroup = function CheckboxButtonGroup(_ref) {
+  var data = _ref.data;
+  var name = data.name,
+      className = data.className,
+      _data$options = data.options,
+      options = _data$options === void 0 ? [] : _data$options,
+      _data$onChange = data.onChange,
+      onChange = _data$onChange === void 0 ? function () {} : _data$onChange,
+      disabled = data.disabled;
+
+  var handleChange = function handleChange(e, i) {
+    var value = [];
+    options[i].checked = options[i].checked !== true;
+    options.forEach(function (v) {
+      if (v.checked) {
+        value.push(v.value);
+      }
+    });
+    onChange(e, name, value);
+  };
+
+  return /*#__PURE__*/React.createElement("div", {
+    className: "".concat(styles.group).concat(className ? " ".concat(className) : '')
+  }, options.map(function (v, i) {
+    var label = v.label,
+        value = v.value,
+        checked = v.checked,
+        _v$className = v.className,
+        className = _v$className === void 0 ? '' : _v$className;
+    return /*#__PURE__*/React.createElement("label", {
+      key: value || i,
+      className: "".concat(styles.label).concat(className ? " ".concat(className) : '')
+    }, /*#__PURE__*/React.createElement("input", {
+      type: "checkbox",
+      name: name,
+      className: styles.input,
+      value: value,
+      checked: checked,
+      onChange: function onChange(e) {
+        return handleChange(e, i);
+      },
+      disabled: disabled
+    }), /*#__PURE__*/React.createElement("span", {
+      className: styles.button,
+      disabled: disabled
+    }, label));
+  }));
+};
+
 /* eslint-disable import/no-cycle */
-// import CheckboxButtonGroup from './CheckboxButtonGroup';
-// import Radio from './RadioInput';
 // import RadioGroup from './RadioGroupInput';
 // import DateInput from './DateInput';
 // import DateRangeInput from './DateRangeInput';
@@ -243,9 +304,9 @@ var CheckboxInput = function CheckboxInput(_ref2) {
 // import NumberCommaInput from './NumberCommaInput';
 
 /**
- * Input Compoent
+ * Index Compoent
  * @param {object} props
- * @return {Component} Input Compoent
+ * @return {Component} Index Compoent
  */
 
 var Input = function Input(props) {
@@ -258,8 +319,11 @@ var Input = function Input(props) {
       });
     // case 'checkboxGroup':
     //   return <CheckboxGroupInput data={props} />;
-    // case 'checkboxButtonGroup':
-    //   return <CheckboxButtonGroup data={props} />;
+
+    case 'checkboxButtonGroup':
+      return /*#__PURE__*/React.createElement(CheckboxButtonGroup, {
+        data: props
+      });
     // case 'radio':
     //   return <Radio data={props} />;
     // case 'radioGroup':
@@ -309,8 +373,8 @@ var Input = function Input(props) {
   }
 };
 
-var DummyComponent = function DummyComponent() {
-  return /*#__PURE__*/React.createElement("div", null, "I am a dummy react npm module!", /*#__PURE__*/React.createElement(Input, null));
+var SooInput = function SooInput() {
+  return /*#__PURE__*/React.createElement("div", null, "Hello?");
 };
 
-export default DummyComponent;
+export { Input, SooInput };

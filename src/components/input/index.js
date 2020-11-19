@@ -3,7 +3,7 @@ import React from 'react';
 import TextInput from './TextInput';
 import CheckboxInput from './CheckboxInput';
 // import CheckboxGroupInput from './CheckboxGroupInput';
-// import CheckboxButtonGroup from './CheckboxButtonGroup';
+import CheckboxButtonGroup from './CheckboxButtonGroup';
 // import Radio from './RadioInput';
 // import RadioGroup from './RadioGroupInput';
 // import DateInput from './DateInput';
@@ -26,9 +26,9 @@ import CheckboxInput from './CheckboxInput';
 // import NumberCommaInput from './NumberCommaInput';
 
 /**
- * Input Compoent
+ * Index Compoent
  * @param {object} props
- * @return {Component} Input Compoent
+ * @return {Component} Index Compoent
  */
 
 const Input = props => {
@@ -39,8 +39,8 @@ const Input = props => {
       return <CheckboxInput data={props} />;
     // case 'checkboxGroup':
     //   return <CheckboxGroupInput data={props} />;
-    // case 'checkboxButtonGroup':
-    //   return <CheckboxButtonGroup data={props} />;
+    case 'checkboxButtonGroup':
+      return <CheckboxButtonGroup data={props} />;
     // case 'radio':
     //   return <Radio data={props} />;
     // case 'radioGroup':
