@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Soo from 'my-test-package';
 
 function App() {
   return (
     <div className="App">
+      <Soo />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

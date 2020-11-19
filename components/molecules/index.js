@@ -1,1 +1,0 @@
-export { default as SooInput } from './input/SooInput';
