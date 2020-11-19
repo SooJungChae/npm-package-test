@@ -219,7 +219,7 @@ var CheckboxInput = function CheckboxInput(_ref2) {
   });
 };
 
-var styles = {"group":"CheckboxButtonGroup-module_group__w9woX","button":"CheckboxButtonGroup-module_button__2CdIv","label":"CheckboxButtonGroup-module_label__3BBex","input":"CheckboxButtonGroup-module_input__2lPpF"};
+var styles = {"group":"CheckboxButtonGroup-module_group__2w_NC","button":"CheckboxButtonGroup-module_button__2nUwM","label":"CheckboxButtonGroup-module_label__1C91m","input":"CheckboxButtonGroup-module_input__3XUg1"};
 
 /**
  * CheckboxButtonGroup
@@ -373,8 +373,13 @@ var Input = function Input(props) {
   }
 };
 
+// export { default as Input } from './input/index';
+var index = {
+  Input: Input
+};
+
 var SooInput = function SooInput() {
   return /*#__PURE__*/React.createElement("div", null, "Hello?");
 };
 
-export { Input, SooInput };
+export { SooInput, index as molecules };

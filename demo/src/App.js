@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 // import {Input, SooInput} from "../../dist";
-import { Input, SooInput } from 'my-test-package';
+import {molecules, SooInput} from 'my-test-package';
 
 function App() {
-    // console.log(SooInput);
+    console.log(molecules);
     return (
     <div className="App">
         {/*<SooInput />*/}
         {/*<Input />*/}
-        <Input />
+        {/*<Input />*/}
       <SooInput />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

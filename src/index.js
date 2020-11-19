@@ -1,1 +1,1 @@
-export { Input, SooInput } from './components';
+export { molecules, SooInput } from './components';
